@@ -1,22 +1,14 @@
-import javax.swing.JOptionPane;
+import java.util.Scanner;
 
-public class SomaComprimentoStrings {
+public class PesoInformado {
     public static void main(String[] args) {
-        // Lê três Strings usando JOptionPane
-        String string1 = JOptionPane.showInputDialog("Digite a primeira string:");
-        String string2 = JOptionPane.showInputDialog("Digite a segunda string:");
-        String string3 = JOptionPane.showInputDialog("Digite a terceira string:");
+        Scanner scanner = new Scanner(System.in);
 
-        // Calcula o comprimento de cada String
-        int comprimento1 = string1.length();
-        int comprimento2 = string2.length();
-        int comprimento3 = string3.length();
+        System.out.print("Digite seu peso (em kg): ");
+        double peso = scanner.nextDouble();
 
-        // Calcula a soma dos comprimentos
-        int somaComprimentos = comprimento1 + comprimento2 + comprimento3;
+        System.out.println("O peso informado foi " + peso + " kg.");
 
-        // Exibe o resultado em um diálogo JOptionPane
-        JOptionPane.showMessageDialog(null, 
-            "A soma dos comprimentos das strings é: " + somaComprimentos);
+        scanner.close();
     }
 }

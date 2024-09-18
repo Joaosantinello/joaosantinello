@@ -1,18 +1,19 @@
 import java.util.Scanner;
 
-public class DiasVividos {
+public class PalavrasInversas {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        // Solicita a idade ao usuário
-        System.out.print("Digite sua idade em anos: ");
-        int idade = scanner.nextInt();
+        System.out.print("Digite a primeira palavra: ");
+        String palavra1 = scanner.nextLine();
 
-        // Calcula o número aproximado de dias vividos
-        double diasVividos = idade * 365.25;
+        System.out.print("Digite a segunda palavra: ");
+        String palavra2 = scanner.nextLine();
 
-        // Exibe o resultado
-        System.out.printf("Você viveu aproximadamente %.0f dias.%n", diasVividos);
+        System.out.print("Digite a terceira palavra: ");
+        String palavra3 = scanner.nextLine();
+
+        System.out.println("Palavras na ordem contrária: " + palavra3 + " " + palavra2 + " " + palavra1);
 
         scanner.close();
     }
