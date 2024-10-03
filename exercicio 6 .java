@@ -1,26 +1,31 @@
 import java.util.Scanner;
 
-public class NumeroConcatenado {
+public class RaizEInverso {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        double numero;
 
-        System.out.print("Digite o número da milhar: ");
-        char milhar = scanner.next().charAt(0);
+        System.out.println("Digite números (digite -999 para encerrar):");
 
-        System.out.print("Digite o número da centena: ");
-        char centena = scanner.next().charAt(0);
+        while (true) {
+            numero = scanner.nextDouble();
+            
+            if (numero == -999) {
+                break;
+            }
 
-        System.out.print("Digite o número da dezena: ");
-        char dezena = scanner.next().charAt(0);
+            if (numero >= 0) {
+                System.out.println("Raiz quadrada de " + numero + " é: " + Math.sqrt(numero));
+            } else {
+                System.out.println("Número negativo. Raiz quadrada não pode ser calculada.");
+            }
 
-        System.out.print("Digite o número da unidade: ");
-        char unidade = scanner.next().charAt(0);
-
-        // Concatenando os caracteres em uma String
-        String numero = "" + milhar + centena + dezena + unidade;
-
-        // Imprimindo o resultado
-        System.out.println("O número formado é: " + numero);
+            if (numero != 0) {
+                System.out.println("Inverso de " + numero + " é: " + (1 / numero));
+            } else {
+                System.out.println("Inverso não pode ser calculado para zero.");
+            }
+        }
 
         scanner.close();
     }

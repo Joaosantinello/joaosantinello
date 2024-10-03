@@ -1,20 +1,11 @@
-import java.util.Scanner;
-
-public class PalavrasInversas {
+public class NumerosPares {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.print("Digite a primeira palavra: ");
-        String palavra1 = scanner.nextLine();
-
-        System.out.print("Digite a segunda palavra: ");
-        String palavra2 = scanner.nextLine();
-
-        System.out.print("Digite a terceira palavra: ");
-        String palavra3 = scanner.nextLine();
-
-        System.out.println("Palavras na ordem contrária: " + palavra3 + " " + palavra2 + " " + palavra1);
-
-        scanner.close();
+        int contador = 0;
+        for (int i = 1; contador < 100; i++) {
+            if (i % 2 == 0) {
+                System.out.println(i);
+                contador++;
+            }
+        }
     }
 }

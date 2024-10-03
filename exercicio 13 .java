@@ -1,25 +1,33 @@
 import java.util.Scanner;
 
-public class CalcularExpressao {
+public class VerificaNumeroPrimo {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Digite um número: ");
+        int numero = scanner.nextInt();
 
-        // Entrada dos números reais a, b e c
-        System.out.print("Digite o valor de a: ");
-        double a = scanner.nextDouble();
-        
-        System.out.print("Digite o valor de b: ");
-        double b = scanner.nextDouble();
-        
-        System.out.print("Digite o valor de c: ");
-        double c = scanner.nextDouble();
-        
-        // Cálculo da expressão x = 2 * ( ( a – c ) / 8 ) – b * 5
-        double x = 2 * ( (a - c) / 8 ) - b * 5;
-        
-        // Impressão do resultado
-        System.out.println("O resultado da expressão é: " + x);
-        
+        // Verificação de número primo
+        if (numero <= 1) {
+            System.out.println(numero + " não é um número primo.");
+        } else {
+            boolean isPrimo = true;
+
+            // Verifica se o número é primo
+            for (int i = 2; i <= Math.sqrt(numero); i++) {
+                if (numero % i == 0) {
+                    isPrimo = false;
+                    break;
+                }
+            }
+
+            if (isPrimo) {
+                System.out.println(numero + " é um número primo.");
+            } else {
+                System.out.println(numero + " não é um número primo.");
+            }
+        }
+
         scanner.close();
     }
 }

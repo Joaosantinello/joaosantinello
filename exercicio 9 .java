@@ -1,23 +1,13 @@
-import java.util.Scanner;
-
-public class LogaritmoBase {
+public class NumerosESoma {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        
-        // Entrada do número
-        System.out.print("Digite um número: ");
-        double numero = scanner.nextDouble();
-        
-        // Entrada da base
-        System.out.print("Digite a base do logaritmo: ");
-        double base = scanner.nextDouble();
-        
-        // Cálculo do logaritmo na base desejada
-        double logaritmo = Math.log(numero) / Math.log(base);
-        
-        // Impressão do resultado
-        System.out.println("O logaritmo de " + numero + " na base " + base + " é: " + logaritmo);
-        
-        scanner.close();
+        int soma = 0;
+
+        System.out.println("Números de 1 a 100:");
+        for (int i = 1; i <= 100; i++) {
+            System.out.println(i);
+            soma += i;
+        }
+
+        System.out.println("A soma de todos os números de 1 a 100 é: " + soma);
     }
 }
