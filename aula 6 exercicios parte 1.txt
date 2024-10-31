@@ -1,0 +1,149 @@
+
+Aula 6 
+
+
+
+exercício 1
+
+(Quadrado, Retangulo, Circulo, Losango e Trapézio)
+
+
+
+exercício 2	
+
+Figura
+├── Figura2D
+│   ├── Quadrilatero
+│   │   ├── Quadrado
+│   │   ├── Retangulo
+│   │   └── Losango
+│   ├── Circulo
+│   └── Trapézio
+└── Figura3D
+    ├── Cubo
+    └── Esfera
+
+
+
+exercício 3 
+
+Classe Animal:
+
+Define os atributos nome e numeroPatas.
+Possui três construtores: um padrão, um que recebe apenas o nome, e um que recebe o nome e a quantidade de patas.
+Classe Mamifero:
+
+Herda de Animal e tem um único construtor que recebe o nome e o número de patas, repassando-os ao construtor da superclasse.
+Classes Cachorro e Gato:
+
+Ambas herdam de Mamifero e possuem um único construtor que recebe apenas o nome.
+O construtor repassa o nome e define o número de patas como 4, chamando o construtor de Mamifero.
+
+
+
+exercício 4
+
+public class Teste {
+    public static void main(String[] args) {
+        // Instanciando um objeto Cachorro
+        Cachorro cachorro = new Cachorro("Rex");
+
+        // Instanciando um objeto Gato
+        Gato gato = new Gato("Mia");
+
+        // Exibindo informações do Cachorro
+        System.out.println("Cachorro: ");
+        System.out.println("Nome: " + cachorro.nome);
+        System.out.println("Número de patas: " + cachorro.numeroPatas);
+
+        // Exibindo informações do Gato
+        System.out.println("\nGato: ");
+        System.out.println("Nome: " + gato.nome);
+        System.out.println("Número de patas: " + gato.numeroPatas);
+    }
+}
+
+
+
+exercício 5 
+
+// Classe Oviparo
+class Oviparo {
+    String tipoCasca;
+    double temperaturaIncubacao;
+
+    // Construtor que define os atributos comuns a todos os ovíparos
+    public Oviparo(String tipoCasca, double temperaturaIncubacao) {
+        this.tipoCasca = tipoCasca;
+        this.temperaturaIncubacao = temperaturaIncubacao;
+    }
+
+    // Método para exibir informações do ovíparo
+    public void exibirInfo() {
+        System.out.println("Tipo de Casca: " + tipoCasca);
+        System.out.println("Temperatura de Incubação: " + temperaturaIncubacao + "°C");
+    }
+}
+
+// Classe Ave que herda de Oviparo
+class Ave extends Oviparo {
+    public Ave() {
+        // Definindo características típicas de aves
+        super("Casca Dura", 37.5);
+    }
+
+    // Método específico para Ave
+    public void voar() {
+        System.out.println("A ave está voando.");
+    }
+}
+
+// Classe Reptil que herda de Oviparo
+class Reptil extends Oviparo {
+    public Reptil() {
+        // Definindo características típicas de répteis
+        super("Casca Mole", 30.0);
+    }
+
+    // Método específico para Reptil
+    public void rastejar() {
+        System.out.println("O réptil está rastejando.");
+    }
+}
+
+
+
+exercício 6
+
+A solução mais comum seria fazer com que a classe Ornitorrinco herde da classe Mamifero para garantir acesso aos atributos e métodos relacionados à produção de leite e outras características típicas de mamíferos.
+
+
+
+exercício 7 
+
+            Animal
+               |
+          --------------
+          |            |
+      Mamifero     (Interface) Oviparo
+          |              |
+    ----------------      |
+    |              |      |
+Cachorro        Gato   Ornitorrinco
+                         (implements Oviparo)
+
+
+
+exercício 8 
+
+O "Deadly Diamond of Death" é um problema que aparece quando uma classe herda de duas classes que compartilham uma mesma superclasse. Isso forma uma estrutura em forma de diamante, criando confusão: a classe derivada acaba com duas versões da mesma superclasse, e isso causa problemas de ambiguidade. Por exemplo, se a classe derivada tentar acessar um método da superclasse, o compilador não sabe qual caminho seguir. Linguagens como C++ resolvem isso com "herança virtual". Java evita o problema não permitindo que uma classe herde de mais de uma classe ao mesmo tempo.
+
+       Animal
+         /   \
+    Mamifero   Oviparo
+         \     /
+       Ornitorrinco
+
+
+
+

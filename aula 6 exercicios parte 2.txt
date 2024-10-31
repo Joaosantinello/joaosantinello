@@ -1,0 +1,846 @@
+exercício I
+
+
+a) 
+
+public class Ponto {
+    // Atributos da classe
+    private double coordenadaX;
+    private double coordenadaY;
+
+    // Construtor sem parâmetros
+    public Ponto() {
+        this.coordenadaX = 0.0; // Inicializa coordenadaX com 0.0
+        this.coordenadaY = 0.0; // Inicializa coordenadaY com 0.0
+    }
+
+    // Métodos para acessar as coordenadas (getters)
+    public double getCoordenadaX() {
+        return coordenadaX;
+    }
+
+    public double getCoordenadaY() {
+        return coordenadaY;
+    }
+
+    // Método para exibir as coordenadas
+    public void exibirCoordenadas() {
+        System.out.println("Coordenada X: " + coordenadaX + ", Coordenada Y: " + coordenadaY);
+    }
+}
+
+
+b) 
+
+public class Ponto {
+    // Atributos da classe
+    private double coordenadaX;
+    private double coordenadaY;
+
+    // Construtor sem parâmetros
+    public Ponto() {
+        this.coordenadaX = 0.0; // Inicializa coordenadaX com 0.0
+        this.coordenadaY = 0.0; // Inicializa coordenadaY com 0.0
+    }
+
+    // Construtor com parâmetros
+    public Ponto(double coordenadaX, double coordenadaY) {
+        this.coordenadaX = coordenadaX; // Inicializa coordenadaX com o valor passado
+        this.coordenadaY = coordenadaY; // Inicializa coordenadaY com o valor passado
+    }
+
+    // Métodos para acessar as coordenadas (getters)
+    public double getCoordenadaX() {
+        return coordenadaX;
+    }
+
+    public double getCoordenadaY() {
+        return coordenadaY;
+    }
+
+    // Método para exibir as coordenadas
+    public void exibirCoordenadas() {
+        System.out.println("Coordenada X: " + coordenadaX + ", Coordenada Y: " + coordenadaY);
+    }
+}
+
+
+C) 
+public class Ponto {
+    // Atributos da classe
+    private double coordenadaX;
+    private double coordenadaY;
+
+    // Construtor sem parâmetros
+    public Ponto() {
+        this.coordenadaX = 0.0; // Inicializa coordenadaX com 0.0
+        this.coordenadaY = 0.0; // Inicializa coordenadaY com 0.0
+    }
+
+    // Construtor com parâmetros
+    public Ponto(double coordenadaX, double coordenadaY) {
+        this.coordenadaX = coordenadaX; // Inicializa coordenadaX com o valor passado
+        this.coordenadaY = coordenadaY; // Inicializa coordenadaY com o valor passado
+    }
+
+    // Métodos de acesso (getters)
+    public double getCoordenadaX() {
+        return coordenadaX;
+    }
+
+    public double getCoordenadaY() {
+        return coordenadaY;
+    }
+
+    // Métodos modificadores (setters)
+    public void setCoordenadaX(double coordenadaX) {
+        this.coordenadaX = coordenadaX; // Atualiza o valor de coordenadaX
+    }
+
+    public void setCoordenadaY(double coordenadaY) {
+        this.coordenadaY = coordenadaY; // Atualiza o valor de coordenadaY
+    }
+
+    // Método para exibir as coordenadas
+    public void exibirCoordenadas() {
+        System.out.println("Coordenada X: " + coordenadaX + ", Coordenada Y: " + coordenadaY);
+    }
+}
+
+
+d)
+public class Ponto {
+    // Atributos da classe
+    private double coordenadaX;
+    private double coordenadaY;
+
+    // Construtor sem parâmetros
+    public Ponto() {
+        this.coordenadaX = 0.0; // Inicializa coordenadaX com 0.0
+        this.coordenadaY = 0.0; // Inicializa coordenadaY com 0.0
+    }
+
+    // Construtor com parâmetros
+    public Ponto(double coordenadaX, double coordenadaY) {
+        this.coordenadaX = coordenadaX; // Inicializa coordenadaX com o valor passado
+        this.coordenadaY = coordenadaY; // Inicializa coordenadaY com o valor passado
+    }
+
+    // Métodos de acesso (getters)
+    public double getCoordenadaX() {
+        return coordenadaX;
+    }
+
+    public double getCoordenadaY() {
+        return coordenadaY;
+    }
+
+    // Métodos modificadores (setters)
+    public void setCoordenadaX(double coordenadaX) {
+        this.coordenadaX = coordenadaX; // Atualiza o valor de coordenadaX
+    }
+
+    public void setCoordenadaY(double coordenadaY) {
+        this.coordenadaY = coordenadaY; // Atualiza o valor de coordenadaY
+    }
+
+    // Método que retorna uma representação em String dos atributos
+    @Override
+    public String toString() {
+        return "Coordenada X: " + coordenadaX + ", Coordenada Y: " + coordenadaY;
+    }
+
+    // Método para exibir as coordenadas (opcional, pode ser usado para mostrar no console)
+    public void exibirCoordenadas() {
+        System.out.println(this.toString());
+    }
+}
+
+
+
+
+
+exercício II
+
+a)
+public class Circulo extends Ponto {
+    // Atributo da classe Circulo
+    private double raio;
+
+    // Construtor sem parâmetros
+    public Circulo() {
+        super(); // Chama o construtor da classe Ponto, inicializando coordenadaX e coordenadaY com 0.0
+        this.raio = 1.0; // Inicializa raio com 1.0
+    }
+
+    // Construtor com parâmetros (opcional, para criar um círculo com coordenadas e raio específicos)
+    public Circulo(double coordenadaX, double coordenadaY, double raio) {
+        super(coordenadaX, coordenadaY); // Chama o construtor da classe Ponto
+        setRaio(raio); // Usa o setter para garantir que o raio não seja negativo
+    }
+
+    // Método modificador (setter) para o raio
+    public void setRaio(double raio) {
+        if (raio < 0) {
+            throw new IllegalArgumentException("O raio não pode ser negativo."); // Lança exceção se o valor for negativo
+        }
+        this.raio = raio; // Atualiza o valor de raio
+    }
+
+    // Método de acesso (getter) para o raio
+    public double getRaio() {
+        return raio;
+    }
+
+    // Método que retorna uma representação em String dos atributos, incluindo raio
+    @Override
+    public String toString() {
+        return super.toString() + ", Raio: " + raio; // Chama toString da classe Ponto e adiciona o raio
+    }
+}
+
+
+b)
+public class Circulo extends Ponto {
+    // Atributo da classe Circulo
+    private double raio;
+
+    // Construtor sem parâmetros
+    public Circulo() {
+        super(); // Chama o construtor da classe Ponto, inicializando coordenadaX e coordenadaY com 0.0
+        this.raio = 1.0; // Inicializa raio com 1.0
+    }
+
+    // Construtor com parâmetros para inicializar todos os atributos
+    public Circulo(double coordenadaX, double coordenadaY, double raio) {
+        super(coordenadaX, coordenadaY); // Chama o construtor da classe Ponto para inicializar coordenadas
+        setRaio(raio); // Usa o setter para garantir que o raio não seja negativo
+    }
+
+    // Método modificador (setter) para o raio
+    public void setRaio(double raio) {
+        if (raio < 0) {
+            throw new IllegalArgumentException("O raio não pode ser negativo."); // Lança exceção se o valor for negativo
+        }
+        this.raio = raio; // Atualiza o valor de raio
+    }
+
+    // Método de acesso (getter) para o raio
+    public double getRaio() {
+        return raio;
+    }
+
+    // Método que retorna uma representação em String dos atributos, incluindo raio
+    @Override
+    public String toString() {
+        return super.toString() + ", Raio: " + raio; // Chama toString da classe Ponto e adiciona o raio
+    }
+}
+
+
+c)
+public class Circulo extends Ponto {
+    // Atributo da classe Circulo
+    private double raio;
+
+    // Construtor sem parâmetros
+    public Circulo() {
+        super(); // Chama o construtor da classe Ponto, inicializando coordenadaX e coordenadaY com 0.0
+        this.raio = 1.0; // Inicializa raio com 1.0
+    }
+
+    // Construtor com parâmetros para inicializar todos os atributos
+    public Circulo(double coordenadaX, double coordenadaY, double raio) {
+        super(coordenadaX, coordenadaY); // Chama o construtor da classe Ponto
+        setRaio(raio); // Usa o setter para garantir que o raio não seja negativo
+    }
+
+    // Método modificador (setter) para o raio
+    public void setRaio(double raio) {
+        if (raio < 0) {
+            throw new IllegalArgumentException("O raio não pode ser negativo."); // Lança exceção se o valor for negativo
+        }
+        this.raio = raio; // Atualiza o valor de raio
+    }
+
+    // Método de acesso (getter) para o raio
+    public double getRaio() {
+        return raio; // Retorna o valor do raio
+    }
+
+    // Método que retorna uma representação em String dos atributos, incluindo raio
+    @Override
+    public String toString() {
+        return super.toString() + ", Raio: " + raio; // Chama toString da classe Ponto e adiciona o raio
+    }
+}
+
+
+d)
+public class Circulo extends Ponto {
+    // Atributo da classe Circulo
+    private double raio;
+
+    // Construtor sem parâmetros
+    public Circulo() {
+        super(); // Chama o construtor da classe Ponto, inicializando coordenadaX e coordenadaY com 0.0
+        this.raio = 1.0; // Inicializa raio com 1.0
+    }
+
+    // Construtor com parâmetros para inicializar todos os atributos
+    public Circulo(double coordenadaX, double coordenadaY, double raio) {
+        super(coordenadaX, coordenadaY); // Chama o construtor da classe Ponto
+        setRaio(raio); // Usa o setter para garantir que o raio não seja negativo
+    }
+
+    // Método modificador (setter) para o raio
+    public void setRaio(double raio) {
+        if (raio < 0) {
+            throw new IllegalArgumentException("O raio não pode ser negativo."); // Lança exceção se o valor for negativo
+        }
+        this.raio = raio; // Atualiza o valor de raio
+    }
+
+    // Método de acesso (getter) para o raio
+    public double getRaio() {
+        return raio; // Retorna o valor do raio
+    }
+
+    // Método que calcula e retorna o diâmetro do círculo
+    public double calcularDiametro() {
+        return 2 * raio; // O diâmetro é o dobro do raio
+    }
+
+    // Método que retorna uma representação em String dos atributos, incluindo raio
+    @Override
+    public String toString() {
+        return super.toString() + ", Raio: " + raio; // Chama toString da classe Ponto e adiciona o raio
+    }
+}
+
+
+e)
+public class Circulo extends Ponto {
+    // Atributo da classe Circulo
+    private double raio;
+
+    // Construtor sem parâmetros
+    public Circulo() {
+        super(); // Chama o construtor da classe Ponto, inicializando coordenadaX e coordenadaY com 0.0
+        this.raio = 1.0; // Inicializa raio com 1.0
+    }
+
+    // Construtor com parâmetros para inicializar todos os atributos
+    public Circulo(double coordenadaX, double coordenadaY, double raio) {
+        super(coordenadaX, coordenadaY); // Chama o construtor da classe Ponto
+        setRaio(raio); // Usa o setter para garantir que o raio não seja negativo
+    }
+
+    // Método modificador (setter) para o raio
+    public void setRaio(double raio) {
+        if (raio < 0) {
+            throw new IllegalArgumentException("O raio não pode ser negativo."); // Lança exceção se o valor for negativo
+        }
+        this.raio = raio; // Atualiza o valor de raio
+    }
+
+    // Método de acesso (getter) para o raio
+    public double getRaio() {
+        return raio; // Retorna o valor do raio
+    }
+
+    // Método que calcula e retorna o diâmetro do círculo
+    public double calcularDiametro() {
+        return 2 * raio; // O diâmetro é o dobro do raio
+    }
+
+    // Método que calcula e retorna o perímetro do círculo
+    public double calcularPerimetro() {
+        return 2 * Math.PI * raio; // O perímetro é 2πr
+    }
+
+    // Método que retorna uma representação em String dos atributos, incluindo raio
+    @Override
+    public String toString() {
+        return super.toString() + ", Raio: " + raio; // Chama toString da classe Ponto e adiciona o raio
+    }
+}
+
+
+f) 
+public class Circulo extends Ponto {
+    // Atributo da classe Circulo
+    private double raio;
+
+    // Construtor sem parâmetros
+    public Circulo() {
+        super(); // Chama o construtor da classe Ponto, inicializando coordenadaX e coordenadaY com 0.0
+        this.raio = 1.0; // Inicializa raio com 1.0
+    }
+
+    // Construtor com parâmetros para inicializar todos os atributos
+    public Circulo(double coordenadaX, double coordenadaY, double raio) {
+        super(coordenadaX, coordenadaY); // Chama o construtor da classe Ponto
+        setRaio(raio); // Usa o setter para garantir que o raio não seja negativo
+    }
+
+    // Método modificador (setter) para o raio
+    public void setRaio(double raio) {
+        if (raio < 0) {
+            throw new IllegalArgumentException("O raio não pode ser negativo."); // Lança exceção se o valor for negativo
+        }
+        this.raio = raio; // Atualiza o valor de raio
+    }
+
+    // Método de acesso (getter) para o raio
+    public double getRaio() {
+        return raio; // Retorna o valor do raio
+    }
+
+    // Método que calcula e retorna o diâmetro do círculo
+    public double calcularDiametro() {
+        return 2 * raio; // O diâmetro é o dobro do raio
+    }
+
+    // Método que calcula e retorna o perímetro do círculo
+    public double calcularPerimetro() {
+        return 2 * Math.PI * raio; // O perímetro é 2πr
+    }
+
+    // Método que calcula e retorna a área do círculo
+    public double calcularArea() {
+        return Math.PI * Math.pow(raio, 2); // A área é πr²
+    }
+
+    // Método que retorna uma representação em String dos atributos, incluindo raio
+    @Override
+    public String toString() {
+        return super.toString() + ", Raio: " + raio; // Chama toString da classe Ponto e adiciona o raio
+    }
+}
+
+
+g)
+public class Circulo extends Ponto {
+    // Atributo da classe Circulo
+    private double raio;
+
+    // Construtor sem parâmetros
+    public Circulo() {
+        super(); // Chama o construtor da classe Ponto, inicializando coordenadaX e coordenadaY com 0.0
+        this.raio = 1.0; // Inicializa raio com 1.0
+    }
+
+    // Construtor com parâmetros para inicializar todos os atributos
+    public Circulo(double coordenadaX, double coordenadaY, double raio) {
+        super(coordenadaX, coordenadaY); // Chama o construtor da classe Ponto
+        setRaio(raio); // Usa o setter para garantir que o raio não seja negativo
+    }
+
+    // Método modificador (setter) para o raio
+    public void setRaio(double raio) {
+        if (raio < 0) {
+            throw new IllegalArgumentException("O raio não pode ser negativo."); // Lança exceção se o valor for negativo
+        }
+        this.raio = raio; // Atualiza o valor de raio
+    }
+
+    // Método de acesso (getter) para o raio
+    public double getRaio() {
+        return raio; // Retorna o valor do raio
+    }
+
+    // Método que calcula e retorna o diâmetro do círculo
+    public double calcularDiametro() {
+        return 2 * raio; // O diâmetro é o dobro do raio
+    }
+
+    // Método que calcula e retorna o perímetro do círculo
+    public double calcularPerimetro() {
+        return 2 * Math.PI * raio; // O perímetro é 2πr
+    }
+
+    // Método que calcula e retorna a área do círculo
+    public double calcularArea() {
+        return Math.PI * Math.pow(raio, 2); // A área é πr²
+    }
+
+    // Método que retorna uma representação em String dos atributos, incluindo raio e coordenadas
+    @Override
+    public String toString() {
+        return "Coordenadas: (" + getCoordenadaX() + ", " + getCoordenadaY() + "), " +
+               "Raio: " + raio + ", " +
+               "Diâmetro: " + calcularDiametro() + ", " +
+               "Perímetro: " + calcularPerimetro() + ", " +
+               "Área: " + calcularArea();
+    }
+}
+
+
+
+
+
+Exercício III
+
+a)
+public class Retangulo {
+    // Atributos da classe Retangulo
+    private double altura;
+    private double largura;
+
+    // Construtor sem parâmetros
+    public Retangulo() {
+        this.altura = 1.0; // Inicializa altura com 1.0
+        this.largura = 1.0; // Inicializa largura com 1.0 (opcional, se desejar)
+    }
+
+    // Construtor com parâmetros para inicializar altura e largura
+    public Retangulo(double altura, double largura) {
+        this.altura = altura;
+        this.largura = largura;
+    }
+
+    // Método modificador (setter) para a altura
+    public void setAltura(double altura) {
+        if (altura < 0) {
+            throw new IllegalArgumentException("A altura não pode ser negativa."); // Lança exceção se o valor for negativo
+        }
+        this.altura = altura; // Atualiza o valor de altura
+    }
+
+    // Método de acesso (getter) para a altura
+    public double getAltura() {
+        return altura; // Retorna o valor da altura
+    }
+
+    // Método modificador (setter) para a largura
+    public void setLargura(double largura) {
+        if (largura < 0) {
+            throw new IllegalArgumentException("A largura não pode ser negativa."); // Lança exceção se o valor for negativo
+        }
+        this.largura = largura; // Atualiza o valor da largura
+    }
+
+    // Método de acesso (getter) para a largura
+    public double getLargura() {
+        return largura; // Retorna o valor da largura
+    }
+
+    // Método que calcula e retorna a área do retângulo
+    public double calcularArea() {
+        return altura * largura; // A área é altura * largura
+    }
+
+    // Método que retorna uma representação em String dos atributos
+    @Override
+    public String toString() {
+        return "Altura: " + altura + ", Largura: " + largura + ", Área: " + calcularArea();
+    }
+}
+
+
+b)
+public class Retangulo extends Forma {
+    // Atributos da classe Retangulo
+    private double altura;
+    private double largura;
+
+    // Construtor sem parâmetros
+    public Retangulo() {
+        this("Retângulo", 1.0, 1.0); // Chama o construtor com parâmetros, inicializando com valores padrão
+    }
+
+    // Construtor com parâmetros para inicializar atributos próprios e herdados
+    public Retangulo(String nome, double altura, double largura) {
+        super(nome); // Chama o construtor da classe pai Forma
+        this.altura = altura; // Inicializa altura com o valor passado
+        this.largura = largura; // Inicializa largura com o valor passado
+    }
+
+    // Método modificador (setter) para a altura
+    public void setAltura(double altura) {
+        if (altura < 0) {
+            throw new IllegalArgumentException("A altura não pode ser negativa."); // Lança exceção se o valor for negativo
+        }
+        this.altura = altura; // Atualiza o valor de altura
+    }
+
+    // Método de acesso (getter) para a altura
+    public double getAltura() {
+        return altura; // Retorna o valor da altura
+    }
+
+    // Método modificador (setter) para a largura
+    public void setLargura(double largura) {
+        if (largura < 0) {
+            throw new IllegalArgumentException("A largura não pode ser negativa."); // Lança exceção se o valor for negativo
+        }
+        this.largura = largura; // Atualiza o valor da largura
+    }
+
+    // Método de acesso (getter) para a largura
+    public double getLargura() {
+        return largura; // Retorna o valor da largura
+    }
+
+    // Método que calcula e retorna a área do retângulo
+    public double calcularArea() {
+        return altura * largura; // A área é altura * largura
+    }
+
+    // Método que retorna uma representação em String dos atributos
+    @Override
+    public String toString() {
+        return "Nome: " + getNome() + ", Altura: " + altura + ", Largura: " + largura + ", Área: " + calcularArea();
+    }
+}
+
+
+c)
+public class Retangulo extends Forma {
+    // Atributos da classe Retangulo
+    private double altura;
+    private double largura;
+
+    // Construtor sem parâmetros
+    public Retangulo() {
+        this("Retângulo", 1.0, 1.0); // Chama o construtor com parâmetros, inicializando com valores padrão
+    }
+
+    // Construtor com parâmetros para inicializar atributos próprios e herdados
+    public Retangulo(String nome, double altura, double largura) {
+        super(nome); // Chama o construtor da classe pai Forma
+        this.altura = altura; // Inicializa altura com o valor passado
+        this.largura = largura; // Inicializa largura com o valor passado
+    }
+
+    // Método modificador (setter) para a altura
+    public void setAltura(double altura) {
+        if (altura < 0) {
+            throw new IllegalArgumentException("A altura não pode ser negativa."); // Lança exceção se o valor for negativo
+        }
+        this.altura = altura; // Atualiza o valor de altura
+    }
+
+    // Método de acesso (getter) para a altura
+    public double getAltura() {
+        return altura; // Retorna o valor da altura
+    }
+
+    // Método modificador (setter) para a largura
+    public void setLargura(double largura) {
+        if (largura < 0) {
+            throw new IllegalArgumentException("A largura não pode ser negativa."); // Lança exceção se o valor for negativo
+        }
+        this.largura = largura; // Atualiza o valor da largura
+    }
+
+    // Método de acesso (getter) para a largura
+    public double getLargura() {
+        return largura; // Retorna o valor da largura
+    }
+
+    // Método que calcula e retorna a área do retângulo
+    public double calcularArea() {
+        return altura * largura; // A área é altura * largura
+    }
+
+    // Método que retorna uma representação em String dos atributos
+    @Override
+    public String toString() {
+        return "Nome: " + getNome() + ", Altura: " + altura + ", Largura: " + largura + ", Área: " + calcularArea();
+    }
+}
+
+
+d)
+public class Cilindro extends Circulo {
+    // Atributo altura do cilindro
+    private double altura;
+
+    // Construtor sem parâmetros
+    public Cilindro() {
+        this(1.0, 1.0); // Inicializa raio e altura com 1.0
+    }
+
+    // Construtor com parâmetros para inicializar atributos próprios e herdados
+    public Cilindro(double raio, double altura) {
+        super(raio); // Chama o construtor da classe pai Circulo
+        this.altura = altura; // Inicializa altura com o valor passado
+    }
+
+    // Método modificador (setter) para a altura
+    public void setAltura(double altura) {
+        if (altura < 0) {
+            throw new IllegalArgumentException("A altura não pode ser negativa."); // Lança exceção se o valor for negativo
+        }
+        this.altura = altura; // Atualiza o valor da altura
+    }
+
+    // Método de acesso (getter) para a altura
+    public double getAltura() {
+        return altura; // Retorna o valor da altura
+    }
+
+    // Método que calcula e retorna o volume do cilindro
+    public double calcularVolume() {
+        double raio = getRaio(); // Obtém o raio do círculo (herdado da classe Circulo)
+        return Math.PI * Math.pow(raio, 2) * altura; // Volume = π * r² * h
+    }
+
+    // Método que retorna uma representação em String dos atributos
+    @Override
+    public String toString() {
+        return "Raio: " + getRaio() + ", Altura: " + altura + ", Volume: " + calcularVolume();
+    }
+}
+
+
+e)
+public class Cilindro extends Circulo {
+    // Atributo altura do cilindro
+    private double altura;
+
+    // Construtor sem parâmetros
+    public Cilindro() {
+        this(1.0, 1.0); // Inicializa raio e altura com 1.0
+    }
+
+    // Construtor com parâmetros para inicializar atributos próprios e herdados
+    public Cilindro(double raio, double altura) {
+        super(raio); // Chama o construtor da classe pai Circulo
+        this.altura = altura; // Inicializa altura com o valor passado
+    }
+
+    // Método modificador (setter) para a altura
+    public void setAltura(double altura) {
+        if (altura < 0) {
+            throw new IllegalArgumentException("A altura não pode ser negativa."); // Lança exceção se o valor for negativo
+        }
+        this.altura = altura; // Atualiza o valor da altura
+    }
+
+    // Método de acesso (getter) para a altura
+    public double getAltura() {
+        return altura; // Retorna o valor da altura
+    }
+
+    // Método que calcula e retorna o volume do cilindro
+    public double calcularVolume() {
+        double raio = getRaio(); // Obtém o raio do círculo (herdado da classe Circulo)
+        return Math.PI * Math.pow(raio, 2) * altura; // Volume = π * r² * h
+    }
+
+    // Método que calcula e retorna a área da superfície externa do cilindro
+    public double calcularAreaSuperficie() {
+        double raio = getRaio(); // Obtém o raio do círculo (herdado da classe Circulo)
+        return 2 * Math.PI * raio * altura + 2 * Math.PI * Math.pow(raio, 2); // Área = 2πrh + 2πr²
+    }
+
+    // Método que retorna uma representação em String dos atributos
+    @Override
+    public String toString() {
+        return "Raio: " + getRaio() + ", Altura: " + altura + 
+               ", Volume: " + calcularVolume() + 
+               ", Área da superfície: " + calcularAreaSuperficie();
+    }
+}
+
+
+f) 
+public class Cilindro extends Circulo {
+    // Atributo altura do cilindro
+    private double altura;
+
+    // Construtor sem parâmetros
+    public Cilindro() {
+        this(1.0, 1.0); // Inicializa raio e altura com 1.0
+    }
+
+    // Construtor com parâmetros para inicializar atributos próprios e herdados
+    public Cilindro(double raio, double altura) {
+        super(raio); // Chama o construtor da classe pai Circulo
+        this.altura = altura; // Inicializa altura com o valor passado
+    }
+
+    // Método modificador (setter) para a altura
+    public void setAltura(double altura) {
+        if (altura < 0) {
+            throw new IllegalArgumentException("A altura não pode ser negativa."); // Lança exceção se o valor for negativo
+        }
+        this.altura = altura; // Atualiza o valor da altura
+    }
+
+    // Método de acesso (getter) para a altura
+    public double getAltura() {
+        return altura; // Retorna o valor da altura
+    }
+
+    // Método que calcula e retorna o volume do cilindro
+    public double calcularVolume() {
+        double raio = getRaio(); // Obtém o raio do círculo (herdado da classe Circulo)
+        return Math.PI * Math.pow(raio, 2) * altura; // Volume = π * r² * h
+    }
+
+    // Método que calcula e retorna a área da superfície externa do cilindro
+    public double calcularAreaSuperficie() {
+        double raio = getRaio(); // Obtém o raio do círculo (herdado da classe Circulo)
+        return 2 * Math.PI * raio * altura + 2 * Math.PI * Math.pow(raio, 2); // Área = 2πrh + 2πr²
+    }
+
+    // Método que retorna uma representação em String dos atributos (próprios e herdados)
+    @Override
+    public String toString() {
+        return "Raio: " + getRaio() + 
+               ", Altura: " + altura + 
+               ", Volume: " + calcularVolume() + 
+               ", Área da superfície: " + calcularAreaSuperficie();
+    }
+}
+
+
+
+
+
+Exercício IV
+
+public class TesteGeometria {
+    public static void main(String[] args) {
+        // Testando a classe Ponto
+        Ponto ponto = new Ponto();
+        System.out.println("Ponto inicial: " + ponto);
+
+        ponto.setCoordenadaX(2.0);
+        ponto.setCoordenadaY(3.0);
+        System.out.println("Ponto modificado: " + ponto);
+
+        // Testando a classe Circulo
+        Circulo circulo = new Circulo(3.0); // raio 3.0
+        System.out.println("Círculo: " + circulo);
+        
+        // Alterando o raio do círculo
+        circulo.setRaio(5.0);
+        System.out.println("Círculo após alterar o raio: " + circulo);
+        
+        // Testando a classe Cilindro
+        Cilindro cilindro = new Cilindro(3.0, 7.0); // raio 3.0, altura 7.0
+        System.out.println("Cilindro: " + cilindro);
+        
+        // Alterando a altura do cilindro
+        cilindro.setAltura(10.0);
+        System.out.println("Cilindro após alterar a altura: " + cilindro);
+
+        // Cálculo e exibição de volume e área da superfície
+        System.out.println("Volume do cilindro: " + cilindro.calcularVolume());
+        System.out.println("Área da superfície do cilindro: " + cilindro.calcularAreaSuperficie());
+    }
+}
+
+
+
+
+
+
+
+
+
